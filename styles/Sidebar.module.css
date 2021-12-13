@@ -1,0 +1,47 @@
+.sidebar {
+  flex-basis: 100%;
+  background-color: var(--secondary-bg);
+  padding: 1.5rem 1.875rem;
+  border-radius: 0.9rem;
+}
+
+.sidebar__title {
+  color: var(--secondary-text-color);
+  font-size: 1.25rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--secondary-text-color);
+}
+
+.sidebar__selects {
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.sidebar__selects select {
+  flex-basis: 100%;
+  background-color: var(--primary-bg);
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  border: unset;
+  cursor: pointer;
+
+  /* Replace default arrow stylying */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.09409 9.18994L0.816466 0.0488263L11.3717 0.0488253L6.09409 9.18994Z" fill="%23A5A5A5"/></svg>');
+  background-position: right 0.7rem top 50%;
+  background-repeat: no-repeat;
+  padding-right: 1rem;
+}
+
+@media (min-width: 980px) {
+  .sidebar {
+    flex-basis: 20%;
+    max-height: 18rem;
+  }
+}
