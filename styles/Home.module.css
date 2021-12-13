@@ -1,8 +1,14 @@
 .main {
   min-height: 100vh;
-  display: flex;
   background-color: var(--primary-bg);
   padding: 3rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+}
+
+
+@media (min-width: 980px) {
+  .main {
+    display: flex;
+  }
 }

@@ -31,7 +31,7 @@ const Sidebar = ({
         <Select
           value={selectedCity}
           handleChange={handleCityStateFilterChange}
-          optionLabel="All Cities test"
+          optionLabel="All Cities"
           options={uniqueCities}
         />
       </div>
