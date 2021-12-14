@@ -1,40 +1,16 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/ProductList.module.css";
 import Slider from "react-slick";
 
-const useDeviceSize = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    // component is mounted and window is available
-    handleWindowResize();
-    window.addEventListener("resize", handleWindowResize);
-    // unsubscribe from the event on component unmount
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  return [width, height];
-};
-
 const ProductList = ({ arr }) => {
-  const [width] = useDeviceSize();
-
   const settings = {
-    width,
-    height: 500,
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 1200,
