@@ -20,7 +20,7 @@
 }
 
 .sidebar__selects select {
-  flex-basis: 100%;
+  width: 100%;
   background-color: var(--primary-bg);
   color: var(--primary-text-color);
   font-size: 1rem;
