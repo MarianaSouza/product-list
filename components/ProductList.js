@@ -47,7 +47,15 @@ const ProductList = ({ arr }) => {
     ],
   };
 
-  const formatDate = (d) => new Date(d).toLocaleDateString("en-US");
+  const formatDate = (d) => {
+    const dateOptions = {
+      day: 'numeric',
+      month: 'numeric',
+      year: 'numeric'
+    }
+    const locale = typeof window !== 'undefined' ? navigator.language : 'en-US';
+    return new Intl.DateTimeFormat(locale, dateOptions).format(new Date(d));
+  }
   
   return (
     <div className={styles.content}>
